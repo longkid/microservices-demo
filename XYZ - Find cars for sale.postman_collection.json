@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "cfaed45f-452a-462c-a1c9-78df721f4a81",
+		"name": "XYZ - Find cars for sale",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "[CAR-CATALOG-SERVICE] Get all cars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/catalog/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"catalog",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[CAR-CATALOG-SERVICE] Place order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"carId\": 1,\n\t\"customerName\": \"Ho Tien Dung\",\n\t\"customerPhone\": \"0909090902\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/catalog/cars/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"catalog",
+						"cars",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[ORDER-SERVICE] Get all orders",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/api/order/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"order",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[CAR-CATALOG-SERVICE] Get a car",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/catalog/cars/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"catalog",
+						"cars",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hello from car-catalog-service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/catalog/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"catalog",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hello from order-service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/order/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"order",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[ORDER-SERVICE] Retrieve car info",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/api/order/orders/retrieve-car-info/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"order",
+						"orders",
+						"retrieve-car-info",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[CAR-CATALOG-SERVICE] Create a car",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"make\": \"Toyota\",\n\t\"model\": \"Camry\",\n\t\"colour\": \"White\",\n\t\"price\": 1200\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/catalog/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"catalog",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[CAR-CATALOG-SERVICE] Update a car",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"make\": \"Toyota\",\n\t\"model\": \"Camry\",\n\t\"colour\": \"White\",\n\t\"price\": 1100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/catalog/cars/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"catalog",
+						"cars",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[CAR-CATALOG-SERVICE] Delete a car",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/api/catalog/cars/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"catalog",
+						"cars",
+						"9"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
